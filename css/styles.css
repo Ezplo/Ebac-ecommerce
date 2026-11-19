@@ -39,6 +39,7 @@ img{display:block;max-width:100%}
 .cart-item__remove img{width:22px;height:22px;object-fit:contain}
 @media(max-width:768px){
 .site-header{min-height:68px;padding-inline:18px}
+.site-header__nav{display:none}
 .site-header__logo{width:42px;height:42px}
 .hero-banner{min-height:270px;padding-block:30px;background-position:center}
 .products{gap:16px;padding:28px 16px}
