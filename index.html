@@ -14,16 +14,20 @@
         <button class="site-header__icon-button" type="button" aria-label="Abrir menú">
             <img class="site-header__icon" src="img/lista.png" alt="">
         </button>
-        <a class="site-header__brand" href="#" aria-label="Inicio">
+        <a class="site-header__brand" href="#inicio" aria-label="Inicio">
             <img class="site-header__logo" src="img/logo-adidas-white.webp" alt="Adidas">
         </a>
+        <nav class="site-header__nav" aria-label="Navegación principal">
+            <a class="site-header__link" href="#inicio">Inicio</a>
+            <a class="site-header__link" href="#productos">Productos</a>
+        </nav>
         <button class="site-header__icon-button" type="button" aria-label="Carrito">
             <img class="site-header__icon" src="img/carrito-de-compras.png" alt="">
         </button>
     </header>
 
     <main class="store">
-        <section class="hero-banner">
+        <section class="hero-banner" id="inicio">
             <div class="hero-banner__content">
                 <span class="hero-banner__eyebrow">Nueva colección</span>
                 <h1 class="hero-banner__title">Productos nuevos</h1>
@@ -34,53 +38,94 @@
 
         <section class="products" id="productos" aria-label="Productos">
             <article class="product-card">
-                <img class="product-card__image" src="img/jer_me.jpg" alt="Jersey México">
+                <span class="product-card__badge">Más vendido</span>
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/jer_me.jpg" alt="Jersey México">
+                </div>
+                <p class="product-card__category">Fútbol</p>
                 <h2 class="product-card__title">Jersey México 2023</h2>
                 <p class="product-card__price">$1,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/chamarra.jpg" alt="Chamarra México">
+                <span class="product-card__badge product-card__badge--new">Nuevo</span>
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/chamarra.jpg" alt="Chamarra México">
+                </div>
+                <p class="product-card__category">Ropa</p>
                 <h2 class="product-card__title">Chamarra México 2023</h2>
                 <p class="product-card__price">$2,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                <span class="product-card__badge product-card__badge--new">Nuevo</span>
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                </div>
+                <p class="product-card__category">Calzado</p>
                 <h2 class="product-card__title">Adidas LG2</h2>
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                </div>
+                <p class="product-card__category">Calzado</p>
                 <h2 class="product-card__title">Adidas LG2</h2>
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/jer_me.jpg" alt="Jersey México">
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/jer_me.jpg" alt="Jersey México">
+                </div>
+                <p class="product-card__category">Fútbol</p>
                 <h2 class="product-card__title">Jersey México 2023</h2>
                 <p class="product-card__price">$1,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/chamarra.jpg" alt="Chamarra México">
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/chamarra.jpg" alt="Chamarra México">
+                </div>
+                <p class="product-card__category">Ropa</p>
                 <h2 class="product-card__title">Chamarra México 2023</h2>
                 <p class="product-card__price">$2,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                </div>
+                <p class="product-card__category">Calzado</p>
                 <h2 class="product-card__title">Adidas LG2</h2>
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
             <article class="product-card">
-                <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                <div class="product-card__media">
+                    <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
+                </div>
+                <p class="product-card__category">Calzado</p>
                 <h2 class="product-card__title">Adidas LG2</h2>
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
+        </section>
+
+        <section class="offers" id="ofertas" aria-labelledby="offers-title">
+            <div class="offers__content">
+                <span class="offers__eyebrow">Selección especial</span>
+                <h2 class="offers__title" id="offers-title">Encuentra tu próximo favorito</h2>
+                <p class="offers__description">Descubre prendas y calzado para acompañarte en cada entrenamiento y en tu día a día.</p>
+                <a class="button button--light" href="#productos">Ver productos</a>
+            </div>
+            <div class="offers__highlight" aria-label="Promoción destacada">
+                <span class="offers__highlight-label">Oferta destacada</span>
+                <strong class="offers__highlight-value">-20%</strong>
+                <span class="offers__highlight-note">En artículos seleccionados</span>
+            </div>
         </section>
 
         <aside class="cart-panel" aria-label="Carrito de compras">
