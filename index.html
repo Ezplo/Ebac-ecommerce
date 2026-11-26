@@ -34,8 +34,37 @@
             </div>
         </section>
 
+        <section class="catalog-tools" aria-label="Herramientas del catálogo">
+            <div class="catalog-tools__search">
+                <label class="catalog-tools__label" for="product-search">Buscar productos</label>
+                <input class="catalog-tools__input" id="product-search" type="search" placeholder="Ej. Jersey, chamarra, tenis..." autocomplete="off">
+            </div>
+            <div class="catalog-tools__filters">
+                <div class="catalog-tools__field">
+                    <label class="catalog-tools__label" for="category-filter">Categoría</label>
+                    <select class="catalog-tools__select" id="category-filter">
+                        <option value="all">Todas</option>
+                        <option value="fútbol">Fútbol</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="calzado">Calzado</option>
+                    </select>
+                </div>
+                <div class="catalog-tools__field">
+                    <label class="catalog-tools__label" for="sort-products">Ordenar por</label>
+                    <select class="catalog-tools__select" id="sort-products">
+                        <option value="default">Destacados</option>
+                        <option value="price-asc">Menor precio</option>
+                        <option value="price-desc">Mayor precio</option>
+                        <option value="name">Nombre A-Z</option>
+                    </select>
+                </div>
+                <button class="catalog-tools__favorites" id="show-favorites" type="button" aria-pressed="false">♡ Mis favoritos <span id="favorites-count">0</span></button>
+            </div>
+            <p class="catalog-tools__results" id="catalog-results" aria-live="polite"></p>
+        </section>
+
         <section class="products" id="productos" aria-label="Productos">
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-001">
                 <span class="product-card__badge">Más vendido</span>
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/jer_me.jpg" alt="Jersey México">
@@ -45,7 +74,7 @@
                 <p class="product-card__price">$1,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-002">
                 <span class="product-card__badge product-card__badge--new">Nuevo</span>
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/chamarra.jpg" alt="Chamarra México">
@@ -55,7 +84,7 @@
                 <p class="product-card__price">$2,000</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-003">
                 <span class="product-card__badge product-card__badge--new">Nuevo</span>
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/lg2.jpg" alt="Adidas LG2">
@@ -65,7 +94,7 @@
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-004">
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/start low.jpg" alt="Adidas Start Low">
                 </div>
@@ -74,7 +103,7 @@
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-005">
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/china.jpg" alt="Chamarra Chinese Olive Green">
                 </div>
@@ -83,7 +112,7 @@
                 <p class="product-card__price">$1,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-006">
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/lifestyle.avif" alt="Soccer lifestyle">
                 </div>
@@ -92,7 +121,7 @@
                 <p class="product-card__price">$1,250</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-007">
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/alemania vis.webp" alt="Alemania Visitia">
                 </div>
@@ -101,7 +130,7 @@
                 <p class="product-card__price">$2,500</p>
                 <button class="button button--dark" type="button">Agregar al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-id="product-008">
                 <div class="product-card__media">
                     <img class="product-card__image" src="img/aero.png" alt="Aeroready">
                 </div>
@@ -138,9 +167,11 @@
             </div>
             <div class="cart-summary">
                 <p>Total: <strong id="cart-total">$0</strong></p>
-                <button class="button button--dark cart-clear" id="clear-cart" type="button">Vaciar carrito</button>
+                <button class="button button--dark cart-checkout" id="checkout-button" type="button">Finalizar compra</button>
+                <button class="button button--light cart-clear" id="clear-cart" type="button">Vaciar carrito</button>
             </div>
         </aside>
+        <div class="store-toast" id="store-toast" role="status" aria-live="polite"></div>
     </main>
     <script src="js/app.js"></script>
 </body>
